@@ -12,12 +12,14 @@ test('camelCase w/backticks', () => {
   render(<App />);
   const colorButton = screen.getByRole('button', { name: 'Change to blue' })
   expect(colorButton).toHaveStyle(`backgroundColor: 'red'`);
+  // expect(colorButton).toHaveStyle(`backgroundColor: 'brad'`);
 });
 
 test('kebab-case w/backticks', () => {
   render(<App />);
   const colorButton = screen.getByRole('button', { name: 'Change to blue' })
   expect(colorButton).toHaveStyle(`background-color: 'red'`);
+  // expect(colorButton).toHaveStyle(`background-color: 'brad'`);
 });
 
 test('camelCase w/object', () => {
