@@ -8,8 +8,11 @@ test('button has correct initial color', () => {
   expect(colorButton).toHaveStyle(`backgroundColor: 'red'`);
 });
 
-test('button text changes to blue when clicked', () => {
-  // render(<App />);
-  // const colorButton = screen.getByRole('button', 'Change to bluee');
-  // expect(colorButton).toHaveStyle(`backgroundColor: 'blue'`);
+test('background color changes to blue when clicked once, and text changes', () => {
+  render(<App />);
+  const colorButton = screen.getByRole('button', 'Change to bluee');
+  fireEvent.click(colorButton);
+
+  expect(colorButton).toHaveStyle({ backgroundColor: 'blue' });
+  expect(colorButton.textContent).toBe('Change to red');
 });
