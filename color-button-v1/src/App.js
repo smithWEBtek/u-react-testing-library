@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div>
-      <button><h1 className='red'>Change to blue</h1></button>
+      <button style={{ backgroundColor: 'red' }}>Change to blue</button>
     </div >
   );
 }
