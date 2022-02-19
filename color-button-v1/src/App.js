@@ -15,11 +15,12 @@ const App = () => {
         onClick={() => setBtnColor(newButtonColor)}
         disabled={isBtnDisabled}
         className={isBtnDisabled ? 'disabled' : 'enabled'}
-      >Change to {newButtonColor}</button>
-      <input type='checkbox'
-        onClick={handleCheckbox} />
-    </div >
+      >
+        Change to {newButtonColor}
+      </button>
+      <input type="checkbox" onClick={handleCheckbox} />
+    </div>
   );
-}
+};
 
 export default App;
